@@ -5,6 +5,14 @@ def encoder(string):
         encoded_password += digit
     return encoded_password
 
+#Anton's decoder
+def decoder(encrypted):
+    decrypt = []                        #initializes array
+    for element in encrypted:
+        element = int(element) - 3      #adds 3 to each iterated item
+        decrypt.append(element)         #adds to list
+    decrypt = int(''.join(str(digit) for digit in decrypt))  #converts list to integer
+    return decrypt      #returns string
 
 def main():
     encoding = True
